@@ -166,3 +166,117 @@
 // 5.Relarional Oprators .
 // 6.Assignment Oprators =
 // 7.Ternary Oparator ?
+
+// let a = 10;
+
+// let b = 20;
+
+// let c = a + b;
+
+// console.log(c)
+
+// console.log(a + b)
+
+// post increment and decrement
+
+let x = 10;
+
+console.log(x++) //10
+console.log(x++) //11
+console.log(x) //12
+// console.log(x) //12
+
+let y = 10;
+
+console.log(y--)
+console.log(y--)
+console.log(y)
+console.log(y)
+
+// pre increment and decrement
+
+let p = 10
+
+console.log(++p)
+console.log(++p)
+console.log(p)
+
+let q = 10
+
+console.log(--q)
+console.log(--q)
+console.log(q)
+
+// = expresion, condition - statement  
+
+// condition statement: 1.condition statement 2.looping statement
+
+// if, if-else, if-else_if, if-else-if-ladder, nasted if, switch case, ternary statement
+
+
+// if(condition == true){
+//     // true code 
+// }
+
+// nextline
+
+let a = 500;
+
+let b = 300;
+
+let c = 200;
+
+let d = 50;
+
+// if(a > b){
+//     console.log("A is greater")
+// }else{
+//     console.log("B is greater")
+// }
+
+
+// console.log("Program Completed")
+
+// nasted if
+
+// if(a > b){
+//     if(a > c){
+//        console.log("A is greater than B & C !") 
+//     }
+// }
+
+// if(a > b){
+//     if(a > c){
+//        console.log("A is greater than B & C !") 
+//     }else{
+//        console.log("C is greater than B & A !") 
+//     }
+// }else if(b > c){
+//     console.log("B is greater than A & C !") 
+// }else{
+//     console.log("C is greater than B & A !") 
+// }
+
+if (a > b) {
+    if (a > c) {
+        if (a > d) {
+            console.log("A is greater than B , C & D !")
+        } else {
+            console.log("D is greater than B , C & A !")
+        }
+    } else if (c > d) {
+        console.log("C is greater than B , A & D !")
+    } else {
+        console.log("D is greater than B , C & A !")
+    }
+} else if (b > c) {
+    if (b > d) {
+        console.log("B is greater than A , C & D !")
+    } else {
+        console.log("D is greater than B , A & c !")
+    }
+} else if (c > d) {
+    console.log("C is greater than A & B , D !")
+} else {
+    console.log("D is greater than B , A & C !")
+}
