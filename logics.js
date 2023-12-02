@@ -648,3 +648,11 @@ while (num != 0) {
 }
 
 console.log(rev)
+
+
+
+// this is new new text from amey fot new brach
+
+let name = "amey khondekar"
+
+console.log(name)
