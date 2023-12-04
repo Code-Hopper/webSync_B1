@@ -627,32 +627,62 @@
 
 // reverse of numbers
 
-let num = 546498
+// let num = 546498
 
-let d;
+// let d;
 
-let rev = 0
+// let rev = 0
 
-let org = num
+// let org = num
 
-while (num != 0) {
+// while (num != 0) {
 
-    d = num % 10;
+//     d = num % 10;
 
-    rev = rev * 10 + d
-    
-    num  = num / 10
+//     rev = rev * 10 + d
 
-    num = parseInt(num)
+//     num  = num / 10
 
-}
+//     num = parseInt(num)
 
-console.log(rev)
+// }
 
+// if(org == rev){
+
+// }
+
+// console.log(rev)
 
 
 // this is new new text from amey fot new brach
 
-let name = "amey khondekar"
+// let name = "amey khondekar"
 
-console.log(name)
+// console.log(name)
+
+// do_while
+
+// do{
+// statements
+// }while(condition)
+
+// let a = 10;
+
+// do {
+//     console.log(a)
+//     a++;
+// } while (a <= 100)
+
+// for loop
+
+// for(initialize ; condition ; updation){
+
+// }
+
+// for(let a = 0 ; a < 100 ; a = a + 5){
+//     console.log(a)
+// }
+
+// forEach , for of , for in , fliter , map 
+
+// function
