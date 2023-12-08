@@ -70,15 +70,15 @@
 
 // console.log(fun1())
 
-let odd_even = (num) => {
-    if (num % 2 == 0) {
-        return num
-    }
-}
+// let odd_even = (num) => {
+//     if (num % 2 == 0) {
+//         return num
+//     }
+// }
 
-let a = 0
+// let a = 0
 
-while(a < 100){
-    console.log(odd_even(a))
-    a++
-}
+// while(a < 100){
+//     console.log(odd_even(a))
+//     a++
+// }

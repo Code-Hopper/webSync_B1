@@ -686,3 +686,77 @@
 // forEach , for of , for in , fliter , map 
 
 // function
+
+// let str1 = "    abcd    "
+
+// console.log(str1.length)
+
+// str1 = str1.trim()
+
+// console.log(str1.length)
+
+// console.log()asdjhajisd231
+
+// let str1 = "abcdef"
+
+// console.log(str1.indexOf('e'))
+
+// let str2 = "Amey Khondekar"
+
+// // let str3 = str2.slice(0,5)
+
+// console.log(str2.slice(0,5))
+// console.log(str2)
+
+// let str4 = str2.substring(0,5)
+
+// console.log(str4)
+// console.log(str2)
+
+// let newStr = "i have a new book and it is really new."
+
+// // newStr = newStr.replace("a","0")
+// newStr = newStr.replaceAll("new","old")
+// console.log(newStr)
+
+// let newString = "amey khondekar"
+// newString.splice(0,"x")
+
+// take user input (full name)
+// sperate first name middle name and last name
+
+// Amey Anil Khondekar
+
+let full_name = prompt("Enter Name !")
+
+let name_divider = (str) => {
+    if (str) {
+
+        if (str.indexOf(" ") == -1) {
+
+            console.log("Please Enter Full Name in First Middle Last format")
+
+        } else {
+
+            str = str.trim()
+
+            let first_name = str.slice(0, str.indexOf(" "))
+
+            let middle_name = str.slice(str.indexOf(" ") + 1, str.lastIndexOf(" "))
+
+            let last_name = str.slice(str.lastIndexOf(" ") + 1,
+                str.length)
+
+
+            console.log(first_name)
+            console.log(middle_name)
+            console.log(last_name)
+        }
+    }
+    else { console.log("please pass a string") }
+
+}
+
+name_divider(full_name)
+
+// unix commond line | chmod oprations  [ chmod 777 ]
