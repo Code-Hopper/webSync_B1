@@ -818,7 +818,7 @@
 
 // console.log(even_numbers)
 
-let arr2 = [1,2,3,4,5,6,7,8,9]
+// let arr2 = [1,2,3,4,5,6,7,8,9]
 
 // arr2.push(10)
 // add a element in the end of array
@@ -830,9 +830,65 @@ let arr2 = [1,2,3,4,5,6,7,8,9]
 // arr2.shift()
 // remove the element from the start of array
 
-arr2.unshift(555)
+// arr2.unshift(555)
 // add the element in the start of array
 
+// console.log(arr2)
 
+// let numbers = [ [1,2,3] , [4,5,6] , [7,8,9] ]
 
-console.log(arr2)
+// for(let element of numbers){
+//     // console.log(element)
+//     for(let number of element){
+//         console.log(number)
+//     }
+// }
+
+// numbers.forEach((element)=>{
+//     element.forEach((number)=>{
+//         console.log(number)
+//     })
+// })
+
+// console.log(numbers.slice(0,2))
+
+// let nums = [1,2,3,4,5,6,1,7,8,9]
+
+// console.log(nums.indexOf(1))
+// console.log(nums.lastIndexOf(1))
+
+// console.log(nums.includes(10))
+
+// nums.splice(5,2,"amey")
+
+// // array.splice(index number, delete count, replacement)
+
+// console.log(nums)
+
+// Math class
+
+// console.log(Math.PI)
+// console.log(Math.E)
+// console.log(Math.SQRT2)
+// console.log(Math.SQRT1_2)
+// console.log(Math.LN10)
+// console.log(Math.LOG10E)
+
+// let a = 12
+
+// console.log(Math.pow(a,4))
+
+// console.log(Math.sqrt(144))
+
+// let b = 1.1;
+
+// console.log(Math.floor(b))
+// console.log(Math.ceil(b))
+
+// console.log(Math.round(b))
+
+// console.log((Math.random()*10)+1)
+
+// let dice = Math.floor((Math.random() * 6) + 1)
+
+// console.log(dice)
