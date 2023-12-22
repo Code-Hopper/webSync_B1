@@ -61,12 +61,28 @@ if (greet_time < 12) {
 // }, 2000)
 
 
-setInterval(() => { 
+// setInterval(() => {
 
-    setTimeout(()=>{
-        console.log("hello world")
-    },2000)
+//     setTimeout(() => {
+//         console.log("hello world")
+//     }, 2000)
 
-},1000)
+// }, 1000)
 
 // js promises / async await function
+
+let nums = [4, 1, 2, 4, 6, 7, 3, 2, 8, 9, 10]
+
+// accesding array 
+// nums.sort((prevIndex, nextIndex) => {
+//     console.log(`The prev index is : ${prevIndex} and the next index is ${nextIndex}`)
+//     return prevIndex - nextIndex
+// })
+
+// dusra array
+nums.sort((prevIndex, nextIndex) => {
+    console.log(`The prev index is : ${prevIndex} and the next index is ${nextIndex}`)
+    return nextIndex - prevIndex
+})
+
+console.log(`nums array after sorting : ${nums}`)
