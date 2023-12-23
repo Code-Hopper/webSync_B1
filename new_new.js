@@ -86,3 +86,4 @@ nums.sort((prevIndex, nextIndex) => {
 })
 
 console.log(`nums array after sorting : ${nums}`)
+
