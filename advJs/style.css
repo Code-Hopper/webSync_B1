@@ -6,6 +6,7 @@
 #d1{
     width: 500px;
     height: 500px;
+    display: inline-block;
 }
 
 .color1{
@@ -14,4 +15,8 @@
 
 .color2{
     background-color: blue;
+}
+
+#btn1{
+    font-size: 10em;
 }

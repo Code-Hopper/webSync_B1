@@ -41,6 +41,26 @@ c.src = "https://picsum.photos/id/238/200/300"
 
 let d = document.getElementById("d1")
 
-d.onclick = ()=>{
-    d.className = "color2"
+// d.onclick = ()=>{
+//     // d.className = "color2"
+//     d.style.background = "linear-gradient(red,blue)"
+//     d.style.width = "1000px"
+// }
+
+let btn = document.getElementById("btn1")
+
+btn.onclick = ()=>{
+    // d.className = "color2"
+    d.style.background = "linear-gradient(red,blue)"
+    // d.style.width = "1000px"
+}
+
+
+let submit_button = document.getElementById("sbtn")
+
+submit_button.onclick = ()=>{
+    console.log(document.getElementById("in1").value)
+
+    document.getElementById("greetUser").innerHTML = `Hello , ${document.getElementById("in1").value} welcome to some where.`
+
 }
