@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>BMI calculator</h1>
+
+    Height(CM): <input class="bmi_inputs" type="number" placeholder="Enter your Height" name="h" id="h">
+
+    <br>
+
+    Weight(KG): <input class="bmi_inputs" type="number" placeholder="Enter your Weight" name="w"
+    id="w">
+
+    <br>
+
+    <button id="calculate_bmi">Calculate</button>
+    
+
+    <h1 id="your_bmi"></h1>
+
+
+    <script type="text/javascript">
+
+        let cbtn = document.getElementById("calculate_bmi")
+
+        cbtn.onclick = () =>{
+
+            let inputs = document.getElementsByClassName("bmi_inputs")
+
+            let height = inputs[0].value
+
+            let weight = inputs[1].value
+
+            console.log(`entred height is ${height}, weight is ${weight}`)
+
+            // convert cm - m
+
+            height = Number(height/100)
+
+            weight = Number(weight)
+         
+            let bmi = weight / Math.pow(height,2)
+
+            bmi = bmi.toFixed(2)            
+
+            let body_type;
+
+            if(bmi < 18){
+                body_type = "your are underweight"
+            }else if(bmi > 18 && bmi < 24){
+                body_type = "your are normal weight"
+            }else{
+                body_type = "your are overweight"
+            }
+
+
+            document.getElementById("your_bmi").innerHTML = `Your BMI Score is ${bmi} & ${body_type}`
+
+        }
+
+    </script>
+</body>
+</html>

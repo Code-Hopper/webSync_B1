@@ -62,5 +62,6 @@ submit_button.onclick = ()=>{
     console.log(document.getElementById("in1").value)
 
     document.getElementById("greetUser").innerHTML = `Hello , ${document.getElementById("in1").value} welcome to some where.`
-
 }
+
+console.log(document.getElementById("d2").dataset)
