@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 class="a" id="a1">This is some heading one</h1>
+
+    <form id="f1">
+
+        <input type="text" placeholder="enter something" name="something" id="i1">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+<script>
+
+    let element1 = document.getElementById("a1")
+
+    element1.addEventListener("contextmenu",()=>{
+        alert("click has been made on a element")
+    })
+
+    document.addEventListener("keypress",(event)=>{
+        console.log("some key has been pressed !")
+        console.log(event.key)
+    })
+
+    document.getElementById("f1").addEventListener("submit",(e)=>{
+        
+        event.preventDefault()
+        alert("form submit has been triggred !")
+        console.log(e.target)
+        // console.log(e)
+        let date = new Date()
+        console.log(`the form has been submited @ ${date.toLocaleDateString()}`)
+
+    })
+
+
+
+</script>
+
+</html>

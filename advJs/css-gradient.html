@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .display-gradients {
+            width: 100%;
+            height: 50vh;
+            border: 2px solid black;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3% 5%;
+        }
+
+        .select-g {
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .select-g div {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="display-gradients" class="display-gradients">
+
+    </div>
+
+    <div class="create-gradient">
+        <form id="grident-form" action="">
+            <div class="input-container">
+                <div>
+                    <span>Color 1</span>
+                    <input type="color" placeholder="color 1" name="c1" id="c1">
+                </div>
+                <div>
+                    <span>color 1 composition</span>
+                    <input type="text" placeholder="color 1 comp" name="c1" id="c1comp">
+                </div>
+                <div>
+                    <span>color 2</span>
+                    <input type="color" placeholder="color 2" name="c2" id="c2">
+                </div>
+                <div>
+                    <span>color 2 composition</span>
+                    <input type="text" placeholder="color 2 comp" name="c2" id="c2comp">
+
+                </div>
+                <!-- optional -->
+                <div>
+                    <span>degree<sup>o</sup></span>
+                    <input type="number" placeholder="degrees" name="deg" id="deg">
+                </div>
+
+            </div>
+
+            <div class="select-g">
+                <div>
+                    <span>Select the grident type</span>
+                    <select name="grident-type" id="grident-type">
+                        <option value="Linear">Linear-gradient</option>
+                        <option value="Conic">Conic-gradient</option>
+                        <option value="Radial">Radial-gradient</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Create Graident</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<script>
+
+    let form = document.getElementById("grident-form")
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault()
+
+        let c1 = document.getElementById("c1")
+        console.log(c1.value)
+        let c1comp = document.getElementById("c1comp")
+        let c2 = document.getElementById("c2")
+        let c2comp = document.getElementById("c2comp")
+        let deg = document.getElementById("deg")
+
+        let selected = document.getElementById("grident-type")
+
+        console.log(selected.value)
+
+        if (selected.value == "Linear") {
+            // alert()
+         
+            if (c1comp.value || c2comp.value == "") {
+                document.getElementById("display-gradients").style.background = `linear-gradient(${deg.value}deg, ${c1.value}, ${c2.value})`
+            } else {
+                document.getElementById("display-gradients").style.background =  `linear-gradient(${deg.value}deg, ${c1.value} ${c1comp.value}% , ${c2.value} ${c2comp.value}%)`
+            }
+
+        }
+
+    })
+
+</script>
+
+</html>
