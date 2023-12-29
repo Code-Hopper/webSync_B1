@@ -121,6 +121,20 @@
                 document.getElementById("display-gradients").style.background =  `linear-gradient(${deg.value}deg, ${c1.value} ${c1comp.value}% , ${c2.value} ${c2comp.value}%)`
             }
 
+        }else if (selected.value == "Radial") {
+            // alert()         
+            if (c1comp.value || c2comp.value == "") {
+                document.getElementById("display-gradients").style.background = `radial-gradient(${c1.value}, ${c2.value})`
+            } else {
+                document.getElementById("display-gradients").style.background =  `radial-gradient(${c1.value} ${c1comp.value}% , ${c2.value} ${c2comp.value}%)`
+            }
+        }else if (selected.value == "Conic") {
+            // alert()         
+            if (c1comp.value || c2comp.value == "") {
+                document.getElementById("display-gradients").style.background = `conic-gradient(${c1.value}, ${c2.value})`
+            } else {
+                document.getElementById("display-gradients").style.background =  `conic-gradient(${c1.value} ${c1comp.value}% , ${c2.value} ${c2comp.value}%)`  
+            }
         }
 
     })

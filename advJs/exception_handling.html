@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expection Handling</title>
+</head>
+
+<body>
+
+    <h1>Exception Handling</h1>
+
+    <script type="text/javascript">
+
+        // try{
+        //     // the code where exception can/might appear
+        // }catch(exception){
+        //     // resolve code
+        // }finally{
+        //     // what to do after all activities
+        // }
+        // pre defined/user defined
+
+        // let a = 0;
+
+        // // console.g(a)
+
+        // try{
+        //     console.log(a)
+        // }catch(exception){
+        //     // console.log(exception)
+        //     console.warn("you might have misss pell something ")
+        //     console.error("you might have misss pell something ")
+        // }finally{
+        //     console.log("all done")
+        // }
+
+        // console.log("hwello wiorld asasd")
+
+        let a = 10;
+
+        let b = "10";
+
+        // console.log(typeof(a))
+
+        try {
+
+            if (typeof (a) == "number" && typeof (b) == "number") {
+                console.log("they are numbers")
+                console.log(a + b)
+            }else{
+                throw("Either a or b is not a number")
+            }
+
+        } catch (exception) {
+            console.warn(exception)
+            a = Number(a)
+            b = Number(b)
+            console.log(a+b)
+        }
+
+    </script>
+
+</body>
+
+</html>
