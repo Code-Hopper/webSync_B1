@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP 1</title>
+</head>
+
+<body>
+
+    <h1>Object Oriented Programming</h1>
+
+    <script>
+
+        class cars {
+            color = "white"
+            wheels = 4
+            doors = 4
+            name = "SOME CAR"
+
+            setCarName = (new_name) => {
+                this.name = new_name
+            }
+            setCarColor = (new_color) => {
+                this.color = new_color
+            }
+            setCarWheels = (new_wheels) => {
+                this.wheels = new_wheels
+            }
+            setCarDoors = (new_doors) => {
+                this.doors = new_doors
+            }
+
+            drive = () => {
+                console.log(`${this.name} is running !`)
+            }
+
+            break = () => {
+                console.log(`${this.name} is break !`)
+            }
+
+            reverse = () => {
+                console.log(`${this.name} is reverse !`)
+            }
+
+        }
+
+        let swift = new cars()
+
+        swift.setCarName("Swift LXI")
+        swift.setCarColor("MAT BLACK")
+        swift.setCarDoors(5)
+        swift.setCarWheels(10)
+
+        console.log(swift.doors)
+        console.log(swift.color)
+        console.log(swift.wheels)
+        console.log(swift.name)
+
+        swift.drive()
+        swift.break()
+        swift.reverse()
+
+        let omni = new cars()
+
+        omni.setCarName("omni")
+
+        console.log(omni.doors)
+        console.log(omni.color)
+        console.log(omni.wheels)
+        console.log(omni.name)
+
+        omni.drive()
+        omni.break()
+        omni.reverse()
+
+    </script>
+</body>
+
+</html>

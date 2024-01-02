@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Promise</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+    // js promise
+    // console.log("somthig1")
+
+
+    let myPromise = new Promise((reslove,reject)=>{
+
+        let x = 0
+
+        console.log("promise is at pending stage")
+
+        if(x == 5){
+            reslove("yes x is 5 and promise is completed")
+        }else{
+            reject("no x is not 5 and promise is rejected")
+        }
+    })
+
+    // console.log("somthig2")
+
+    // handing the promise for reslove and reject stages
+
+    myPromise.then( (reslove)=>{
+        console.log(`my promise has been resloved and it has returned ${reslove}`)
+    },(reject)=>{
+        console.log(`my promise has been rejected and it has returned ${reject}`)
+    }).catch((error)=>{
+        console.log(`this is catch function, i say ${error}`)
+    })
+
+
+</script>
+</html>
