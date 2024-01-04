@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor OOP</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>OOPS class 2</h1>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    class birds {
+        wings = 2
+        CanFly = false
+        region = "india"
+        color = "white"
+        name = "some bird"
+        category = "empty"
+
+        constructor(name, wings, CanFly, region, color, category) {
+            this.name = name
+            this.color = color
+            this.region = region
+            if (typeof (CanFly) == "boolean") {
+                this.CanFly = CanFly
+            } else {
+                console.warn("SET CAN FLY as a TRUE/FALSE !")
+            }
+            this.wings = wings
+            this.category = category
+        }
+
+        makeBirdEat() {
+            console.log(`${this.name} is eating !`)
+        }
+
+        makeBirdFly() {
+            if (this.CanFly) {
+                console.log(`${this.name} is flying !`)
+            } else {
+                console.log(`${this.name} cannot fly !`)
+            }
+        }
+
+        makeBirdSleep() {
+            console.log(`${this.name} is sleeping !`)
+        }
+
+        makeBirdHome() {
+            console.log(`${this.name} is making home !`)
+        }
+
+        BirdIntroduce() {
+            console.log(`Hello i'm ${this.name}! i have ${this.wings} wings, i'm a ${this.region} bird , i'm ${this.color}, I'm belongs to ${this.category} and ${this.CanFly ? "I can fly :)" : "I cannot Fly :( "}`)
+        }
+    }
+
+    class walkingBirds extends birds {
+
+        name = "walkingBird"
+
+        category = "walking bird"
+
+        constructor(name, wings, CanFly, region, color) {
+
+            super(name, wings, CanFly, region,
+                color)
+
+            this.name = name
+        }
+
+        makeBirdWalk() {
+            console.log(`${this.name} is walking !`)
+        }
+
+    }
+
+    class flyingBirds extends birds {
+
+        name = "walkingBird"
+
+        category = "flying bird"
+
+        constructor(name, wings, CanFly, region, color) {
+
+            super(name, wings, CanFly, region,
+                color)
+
+            this.name = name
+        }
+
+        makeBirdSpecial() {
+            console.log(`${this.name} is flying from child class !`)
+        }
+
+    }
+
+
+    let hen = new walkingBirds("hen", 2, false, "gobal", "red & white")
+
+    hen.BirdIntroduce()
+
+    hen.makeBirdEat()
+    hen.makeBirdFly()
+    hen.makeBirdSleep()
+    hen.makeBirdHome()
+    hen.makeBirdWalk()
+
+
+
+    let parrot= new flyingBirds("parrot", 2, true, "gobal", "green")
+
+    parrot.BirdIntroduce()
+
+    parrot.makeBirdEat()
+    parrot.makeBirdFly()
+    parrot.makeBirdSleep()
+    parrot.makeBirdHome()
+    parrot.makeBirdSpecial()
+
+
+</script>
+
+</html>

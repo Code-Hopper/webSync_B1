@@ -19,17 +19,24 @@
             doors = 4
             name = "SOME CAR"
 
-            setCarName = (new_name) => {
-                this.name = new_name
-            }
-            setCarColor = (new_color) => {
-                this.color = new_color
-            }
-            setCarWheels = (new_wheels) => {
-                this.wheels = new_wheels
-            }
-            setCarDoors = (new_doors) => {
-                this.doors = new_doors
+            // setCarName = (new_name) => {
+            //     this.name = new_name
+            // }
+            // setCarColor = (new_color) => {
+            //     this.color = new_color
+            // }
+            // setCarWheels = (new_wheels) => {
+            //     this.wheels = new_wheels
+            // }
+            // setCarDoors = (new_doors) => {
+            //     this.doors = new_doors
+            // }
+
+            setCarData(name, wheels, color, doors){
+                this.name = name
+                this.color = color
+                this.wheels = wheels
+                this.doors = doors
             }
 
             drive = () => {
@@ -48,10 +55,12 @@
 
         let swift = new cars()
 
-        swift.setCarName("Swift LXI")
-        swift.setCarColor("MAT BLACK")
-        swift.setCarDoors(5)
-        swift.setCarWheels(10)
+        swift.setCarData("swift",4,"black",2)
+
+        // swift.setCarName("Swift LXI")
+        // swift.setCarColor("MAT BLACK")
+        // swift.setCarDoors(5)
+        // swift.setCarWheels(10)
 
         console.log(swift.doors)
         console.log(swift.color)

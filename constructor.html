@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor OOP</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>OOPS class 1</h1>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    class birds {
+        wings = 2
+        CanFly = false
+        region = "india"
+        color = "white"
+        name = "some bird"
+
+        constructor(name, wings, CanFly, region, color) {
+            this.name = name
+            this.color = color
+            this.region = region
+            if (typeof (CanFly) == "boolean") {
+                this.CanFly = CanFly
+            } else {
+                console.warn("SET CAN FLY as a TRUE/FALSE !")
+            }
+            this.wings = wings
+        }
+
+        makeBirdEat() {
+            console.log(`${this.name} is eating !`)
+        }
+
+        makeBirdFly() {
+            if (this.CanFly) {
+                console.log(`${this.name} is flying !`)
+            } else {
+                console.log(`${this.name} cannot fly !`)
+            }
+        }
+
+        makeBirdSleep() {
+            console.log(`${this.name} is sleeping !`)
+        }
+
+        makeBirdHome() {
+            console.log(`${this.name} is making home !`)
+        }
+
+        BirdIntroduce() {
+            console.log(`Hello i'm ${this.name}! i have ${this.wings} wings, i'm a ${this.region} bird , i'm ${this.color} and ${this.CanFly ? "I can fly :)" : "I cannot Fly :( "}`)
+        }
+    }
+
+    let parrot = new birds("parrot", 2, true, "Gobal", "green")
+
+    // parrot.BirdIntroduce()
+
+    // parrot.makeBirdEat()
+    // parrot.makeBirdFly()
+    // parrot.makeBirdHome()
+    // parrot.makeBirdSleep()
+
+    let hen = new birds("hen", 2, false, "Indian", "red & white")
+
+    // hen.BirdIntroduce()
+
+    // hen.makeBirdEat()
+    // hen.makeBirdFly()
+    // hen.makeBirdHome()
+    // hen.makeBirdSleep()
+
+</script>
+
+</html>
